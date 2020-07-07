@@ -608,7 +608,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-feed {
     position: relative;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     margin: 0 -20px;
     padding: 50px 0 0;
@@ -618,7 +618,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card {
     position: relative;
     flex: 1 1 301px;
-    display: flex;
+    display: block;
     flex-direction: column;
     overflow: hidden;
     margin: 0 0 40px;
