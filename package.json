@@ -16,6 +16,7 @@
         "dev": "gulp",
         "zip": "gulp zip",
         "preview": "gulp zip && rm -rf ../ghost-preview/content/themes/bhoot && unzip ./dist/bhoot.zip -d ../ghost-preview/content/themes/bhoot",
+        "devpreview": "gulp devpreview",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",

@@ -3,6 +3,7 @@ const pump = require('pump');
 const path = require('path');
 const releaseUtils = require('@tryghost/release-utils');
 const inquirer = require('inquirer');
+const {exec} = require('child_process')
 
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
@@ -19,6 +20,7 @@ const colorFunction = require('postcss-color-function');
 const cssnano = require('cssnano');
 const customProperties = require('postcss-custom-properties');
 const easyimport = require('postcss-easy-import');
+const { stdout } = require('process');
 
 const REPO = 'TryGhost/Casper';
 const REPO_READONLY = 'TryGhost/Casper';
@@ -93,10 +95,16 @@ const cssWatcher = () => watch('assets/css/**', css);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, hbsWatcher);
 const build = series(css, js);
+const preview = () => {
+    exec('gulp zip && rm -rf ../ghost-preview/content/themes/bhoot && unzip ./dist/bhoot.zip -d ../ghost-preview/content/themes/bhoot', (error, stdout, stderr) => {
+        console.log('Exported theme for preview.')
+    })
+}
 
 exports.build = build;
 exports.zip = series(build, zipper);
 exports.default = series(build, serve, watcher);
+exports.devpreview = series(build, serve, watcher, preview)
 
 exports.release = () => {
     // @NOTE: https://yarnpkg.com/lang/en/docs/cli/version/

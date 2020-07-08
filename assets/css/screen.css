@@ -621,10 +621,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     flex-direction: column;
     overflow: hidden;
-    margin: 0 0 40px;
-    padding: 0 20px 40px;
-    min-height: 220px;
-    border-bottom: 1px solid color(var(--lightgrey) l(+12%));
+    margin: 0 0 20px;
+    padding: 0 20px;
     background-size: cover;
 }
 
@@ -878,6 +876,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large .post-card-title {
         margin-top: 0;
         font-size: 3.2rem;
+        font-weight: 700;
     }
 
     .post-card-large .post-card-content-link {
@@ -899,7 +898,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* Adjust some margins for smaller screens */
 @media (max-width: 1170px) {
     .post-card {
-        margin-bottom: 5vw;
+        margin-bottom: 3vw;
     }
 }
 
@@ -909,7 +908,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card {
-        margin-bottom: 5vw;
+        margin-bottom: 3vw;
     }
 }
 
