@@ -278,16 +278,16 @@ body {
 /* ---------------------------------------------------------- */
 
 .site-nav-main {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color(var(--darkgrey) l(-5%));
+    /* background: color(var(--darkgrey) l(-5%)); */
 }
 
 .site-nav {
-    position: relative;
+    position: fixed;
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -355,7 +355,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: inline-block;
     margin-right: 32px;
     padding: 12px 0;
-    color: #fff;
+    color: #000;
     font-size: 1.7rem;
     line-height: 1.8rem;
     font-weight: bold;
