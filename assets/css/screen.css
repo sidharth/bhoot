@@ -979,6 +979,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-title {
+    font-size: 3.6rem;
     margin: 0 0 0.2em;
     color: color(var(--darkgrey) l(-5%));
 }
@@ -1418,12 +1419,12 @@ Usage (In Ghost editor):
         line-height: 1.3em;
     }
 
-    .post-full-title {
+    /* .post-full-title {
         margin-top: 0.2em;
         font-size: 4.2rem;
         font-weight: 800;
         line-height: 1.05em;
-    }
+    } */
 
     .post-full-image {
         margin-top: 5px;

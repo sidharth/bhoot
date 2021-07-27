@@ -1,3 +1,7 @@
 .post-full-title, .site-nav-logo, .post-card-title {
     font-family: 'Tahoma', sans-serif;
 }
+
+.post-full-byline-content {
+    margin-bottom: 2em;
+}
